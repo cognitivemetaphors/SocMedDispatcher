@@ -9,7 +9,7 @@
       "DisplayName": "SocMedBotsSignUp",
       "Description": "People who have signed up for SocMedBotsFollowers automation.",
       "CreateTime": "2021-04-02T11:26:01.407Z",
-      "UpdateTime": "2021-04-02T11:28:00.007Z",
+      "UpdateTime": "2021-06-11T10:20:28.24Z",
       "Fields": [
         {
           "Id": "2b25c543-ecd6-4a14-974b-b57fe2cac4e2",
@@ -17,7 +17,7 @@
           "DisplayName": "CreatedBy",
           "Description": "System built-in field",
           "CreateTime": "2021-04-02T11:26:01.42Z",
-          "UpdateTime": "2021-04-02T11:26:01.42Z",
+          "UpdateTime": "2021-06-11T10:20:28.24Z",
           "SqlType": {
             "Name": "UNIQUEIDENTIFIER",
             "LengthLimit": null,
@@ -27,9 +27,11 @@
           },
           "IsSystemField": true,
           "IsRequired": true,
-          "ReferenceEntity": null,
+          "ReferenceEntity": {
+            "Name": "SystemUser"
+          },
           "ReferenceType": "ManyToOne",
-          "FieldDisplayType": "Basic",
+          "FieldDisplayType": "Relationship",
           "ReferenceChoiceSet": null,
           "IsAttachment": false
         },
@@ -129,7 +131,7 @@
           "DisplayName": "UpdatedBy",
           "Description": "System built-in field",
           "CreateTime": "2021-04-02T11:26:01.42Z",
-          "UpdateTime": "2021-04-02T11:26:01.42Z",
+          "UpdateTime": "2021-06-11T10:20:28.24Z",
           "SqlType": {
             "Name": "UNIQUEIDENTIFIER",
             "LengthLimit": null,
@@ -139,9 +141,11 @@
           },
           "IsSystemField": true,
           "IsRequired": false,
-          "ReferenceEntity": null,
+          "ReferenceEntity": {
+            "Name": "SystemUser"
+          },
           "ReferenceType": "ManyToOne",
-          "FieldDisplayType": "Basic",
+          "FieldDisplayType": "Relationship",
           "ReferenceChoiceSet": null,
           "IsAttachment": false
         },
@@ -168,7 +172,7 @@
           "IsAttachment": false
         }
       ],
-      "RecordCount": 2,
+      "RecordCount": 3,
       "EntityType": "Entity"
     },
     {
@@ -177,7 +181,7 @@
       "DisplayName": "SocMedFollowing",
       "Description": "Social Media Following is related to SocMedBotsSignUp",
       "CreateTime": "2021-04-17T12:55:01.303Z",
-      "UpdateTime": "2021-04-17T14:06:34.827Z",
+      "UpdateTime": "2021-06-11T10:20:56.75Z",
       "Fields": [
         {
           "Id": "00c5f1d4-2cb0-49e6-8b07-1065e29eb2ed",
@@ -185,7 +189,7 @@
           "DisplayName": "CreatedBy",
           "Description": "System built-in field",
           "CreateTime": "2021-04-17T12:55:01.313Z",
-          "UpdateTime": "2021-04-17T12:55:01.313Z",
+          "UpdateTime": "2021-06-11T10:20:56.75Z",
           "SqlType": {
             "Name": "UNIQUEIDENTIFIER",
             "LengthLimit": null,
@@ -195,9 +199,11 @@
           },
           "IsSystemField": true,
           "IsRequired": true,
-          "ReferenceEntity": null,
+          "ReferenceEntity": {
+            "Name": "SystemUser"
+          },
           "ReferenceType": "ManyToOne",
-          "FieldDisplayType": "Basic",
+          "FieldDisplayType": "Relationship",
           "ReferenceChoiceSet": null,
           "IsAttachment": false
         },
@@ -319,7 +325,7 @@
           "DisplayName": "UpdatedBy",
           "Description": "System built-in field",
           "CreateTime": "2021-04-17T12:55:01.313Z",
-          "UpdateTime": "2021-04-17T12:55:01.313Z",
+          "UpdateTime": "2021-06-11T10:20:56.75Z",
           "SqlType": {
             "Name": "UNIQUEIDENTIFIER",
             "LengthLimit": null,
@@ -329,9 +335,11 @@
           },
           "IsSystemField": true,
           "IsRequired": false,
-          "ReferenceEntity": null,
+          "ReferenceEntity": {
+            "Name": "SystemUser"
+          },
           "ReferenceType": "ManyToOne",
-          "FieldDisplayType": "Basic",
+          "FieldDisplayType": "Relationship",
           "ReferenceChoiceSet": null,
           "IsAttachment": false
         },
@@ -358,13 +366,182 @@
           "IsAttachment": false
         }
       ],
-      "RecordCount": 8,
+      "RecordCount": 137,
       "EntityType": "Entity"
+    },
+    {
+      "Id": "717544d9-89c8-eb11-a7ad-a085fc8e5f9e",
+      "Name": "SystemUser",
+      "DisplayName": "System Users",
+      "Description": "Contains Automation Cloud users and groups that have ever had roles assigned, or accessed Data Service",
+      "CreateTime": "2021-06-08T18:46:39.12Z",
+      "UpdateTime": "2021-06-08T18:46:39.12Z",
+      "Fields": [
+        {
+          "Id": "db3549c4-3a50-48be-ba90-ec293711b645",
+          "Name": "CreateTime",
+          "DisplayName": "CreateTime",
+          "Description": "System built-in field",
+          "CreateTime": "2021-06-08T18:46:39.14Z",
+          "UpdateTime": "2021-06-08T18:46:39.14Z",
+          "SqlType": {
+            "Name": "DATETIMEOFFSET",
+            "LengthLimit": null,
+            "MaxValue": null,
+            "MinValue": null,
+            "DecimalPrecision": null
+          },
+          "IsSystemField": true,
+          "IsRequired": true,
+          "ReferenceEntity": null,
+          "ReferenceType": "ManyToOne",
+          "FieldDisplayType": "Basic",
+          "ReferenceChoiceSet": null,
+          "IsAttachment": false
+        },
+        {
+          "Id": "5c89c727-c26b-4a4e-9ec7-a816b8a155ed",
+          "Name": "Email",
+          "DisplayName": "E-mail",
+          "Description": "E-mail",
+          "CreateTime": "2021-06-08T18:46:39.14Z",
+          "UpdateTime": "2021-06-08T18:46:39.14Z",
+          "SqlType": {
+            "Name": "NVARCHAR",
+            "LengthLimit": 512,
+            "MaxValue": null,
+            "MinValue": null,
+            "DecimalPrecision": null
+          },
+          "IsSystemField": true,
+          "IsRequired": false,
+          "ReferenceEntity": null,
+          "ReferenceType": "ManyToOne",
+          "FieldDisplayType": "Basic",
+          "ReferenceChoiceSet": null,
+          "IsAttachment": false
+        },
+        {
+          "Id": "a91e19e7-f55e-476f-adcd-d1fba9893ad0",
+          "Name": "Id",
+          "DisplayName": "Id",
+          "Description": "System built-in field",
+          "CreateTime": "2021-06-08T18:46:39.14Z",
+          "UpdateTime": "2021-06-08T18:46:39.14Z",
+          "SqlType": {
+            "Name": "UNIQUEIDENTIFIER",
+            "LengthLimit": null,
+            "MaxValue": null,
+            "MinValue": null,
+            "DecimalPrecision": null
+          },
+          "IsSystemField": true,
+          "IsRequired": true,
+          "ReferenceEntity": null,
+          "ReferenceType": "ManyToOne",
+          "FieldDisplayType": "Basic",
+          "ReferenceChoiceSet": null,
+          "IsAttachment": false
+        },
+        {
+          "Id": "a0459e8d-f40c-47ae-9fa7-fb469bef490c",
+          "Name": "IsActive",
+          "DisplayName": "IsActive",
+          "Description": "IsActive",
+          "CreateTime": "2021-06-08T18:46:39.14Z",
+          "UpdateTime": "2021-06-08T18:46:39.14Z",
+          "SqlType": {
+            "Name": "BIT",
+            "LengthLimit": null,
+            "MaxValue": null,
+            "MinValue": null,
+            "DecimalPrecision": null
+          },
+          "IsSystemField": true,
+          "IsRequired": true,
+          "ReferenceEntity": null,
+          "ReferenceType": "ManyToOne",
+          "FieldDisplayType": "Basic",
+          "ReferenceChoiceSet": null,
+          "IsAttachment": false
+        },
+        {
+          "Id": "97a06177-97d2-49d2-9514-583f5fbe2886",
+          "Name": "Name",
+          "DisplayName": "Name",
+          "Description": "Name",
+          "CreateTime": "2021-06-08T18:46:39.14Z",
+          "UpdateTime": "2021-06-08T18:46:39.14Z",
+          "SqlType": {
+            "Name": "NVARCHAR",
+            "LengthLimit": 512,
+            "MaxValue": null,
+            "MinValue": null,
+            "DecimalPrecision": null
+          },
+          "IsSystemField": true,
+          "IsRequired": true,
+          "ReferenceEntity": null,
+          "ReferenceType": "ManyToOne",
+          "FieldDisplayType": "Basic",
+          "ReferenceChoiceSet": null,
+          "IsAttachment": false
+        },
+        {
+          "Id": "4ec8aba1-c0cc-47e2-b0c2-004dc48204e8",
+          "Name": "Type",
+          "DisplayName": "Type",
+          "Description": "Type",
+          "CreateTime": "2021-06-08T18:46:39.14Z",
+          "UpdateTime": "2021-06-08T18:46:39.14Z",
+          "SqlType": {
+            "Name": "INT",
+            "LengthLimit": null,
+            "MaxValue": 9007199254740991.0,
+            "MinValue": -9007199254740991.0,
+            "DecimalPrecision": null
+          },
+          "IsSystemField": true,
+          "IsRequired": true,
+          "ReferenceEntity": null,
+          "ReferenceType": "ManyToOne",
+          "FieldDisplayType": "ChoiceSetSingle",
+          "ReferenceChoiceSet": {
+            "Name": "UserType"
+          },
+          "IsAttachment": false
+        },
+        {
+          "Id": "79647f55-47c1-4db7-a249-5edbfa630ad2",
+          "Name": "UpdateTime",
+          "DisplayName": "UpdateTime",
+          "Description": "System built-in field",
+          "CreateTime": "2021-06-08T18:46:39.14Z",
+          "UpdateTime": "2021-06-08T18:46:39.14Z",
+          "SqlType": {
+            "Name": "DATETIMEOFFSET",
+            "LengthLimit": null,
+            "MaxValue": null,
+            "MinValue": null,
+            "DecimalPrecision": null
+          },
+          "IsSystemField": true,
+          "IsRequired": false,
+          "ReferenceEntity": null,
+          "ReferenceType": "ManyToOne",
+          "FieldDisplayType": "Basic",
+          "ReferenceChoiceSet": null,
+          "IsAttachment": false
+        }
+      ],
+      "RecordCount": 5,
+      "EntityType": "SystemEntity"
     }
   ],
   "Namespace": "SocMedBotDispatcher",
-  "EntitiesJson": "{\"entities\":[{\"name\":\"SocMedSignUp\",\"displayName\":\"SocMedBotsSignUp\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"description\":\"People who have signed up for SocMedBotsFollowers automation.\",\"fields\":[{\"id\":\"2b25c543-ecd6-4a14-974b-b57fe2cac4e2\",\"name\":\"CreatedBy\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":true,\"displayName\":\"CreatedBy\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-02T11:26:01.42Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-02T11:26:01.42Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"14d5cbd8-3941-4857-8747-6ba2632be899\",\"name\":\"CreateTime\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"DATETIMEOFFSET\"},\"isRequired\":true,\"displayName\":\"CreateTime\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-02T11:26:01.42Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-02T11:26:01.42Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"7bc10f63-a693-eb11-85aa-0003ffba1aac\",\"name\":\"Handle\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"NVARCHAR\",\"lengthLimit\":200},\"isRequired\":true,\"displayName\":\"Handle\",\"description\":\"Social Media Handle being tracked.\",\"createTime\":\"2021-04-02T11:27:21.083Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-02T11:27:31.387Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":false,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"c0339d29-1f6c-435d-90c2-2d95285e17db\",\"name\":\"Id\",\"isPrimaryKey\":true,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":true,\"displayName\":\"Id\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-02T11:26:01.42Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-02T11:26:01.42Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"e9be427a-a693-eb11-85aa-0003ffba1aac\",\"name\":\"SocialMediaSite\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceChoiceSet\":{\"name\":\"SocMedSites\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"isRbacEnabled\":false,\"id\":\"00000000-0000-0000-0000-000000000000\",\"createTime\":\"0001-01-01T00:00:00Z\"},\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"INT\",\"lengthLimit\":200,\"maxValue\":1000000000000.0,\"minValue\":-1000000000000.0},\"isRequired\":true,\"displayName\":\"SocialMediaSite\",\"description\":\"\",\"createTime\":\"2021-04-02T11:28:00.007Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-02T11:28:00.007Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":false,\"fieldDisplayType\":\"ChoiceSetSingle\",\"choiceSetId\":\"1b33dbb2-f88e-eb11-85aa-0003ffba1aac\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"2cd56833-fdf1-4819-8660-cdca252242c4\",\"name\":\"UpdatedBy\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":false,\"displayName\":\"UpdatedBy\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-02T11:26:01.42Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-02T11:26:01.42Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"e3373585-422a-489f-9e47-8a9f060e1f86\",\"name\":\"UpdateTime\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"DATETIMEOFFSET\"},\"isRequired\":false,\"displayName\":\"UpdateTime\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-02T11:26:01.42Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-02T11:26:01.42Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"isAttachment\":false,\"isRbacEnabled\":false}],\"recordCount\":2,\"storageSizeInMB\":0.070312,\"usedStorageSizeInMB\":0.015625,\"isRbacEnabled\":false,\"id\":\"84dc9233-a693-eb11-85aa-0003ffba1aac\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"createTime\":\"2021-04-02T11:26:01.407Z\",\"updateTime\":\"2021-04-02T11:28:00.007Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\"},{\"name\":\"SocMedFollowing\",\"displayName\":\"SocMedFollowing\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"description\":\"Social Media Following is related to SocMedBotsSignUp\",\"fields\":[{\"id\":\"00c5f1d4-2cb0-49e6-8b07-1065e29eb2ed\",\"name\":\"CreatedBy\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":true,\"displayName\":\"CreatedBy\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-17T12:55:01.313Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T12:55:01.313Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"6797e4a8-ea29-4e39-b85d-d84418b89b70\",\"name\":\"CreateTime\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"DATETIMEOFFSET\"},\"isRequired\":true,\"displayName\":\"CreateTime\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-17T12:55:01.313Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T12:55:01.313Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"9bcec182-7c9f-eb11-85aa-0003ffba1aac\",\"name\":\"Followers\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"DECIMAL\",\"lengthLimit\":1000,\"maxValue\":1000000000000.0,\"minValue\":-1000000000000.0,\"decimalPrecision\":2},\"isRequired\":false,\"displayName\":\"Followers\",\"description\":\"The followers of handle on socmediasite recorded on createdby date.\",\"createTime\":\"2021-04-17T12:57:49.333Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T12:57:49.333Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":false,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"defaultValue\":\"0\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"7f3ae1fd-859f-eb11-85aa-0003ffba1aac\",\"name\":\"Handle\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"NVARCHAR\",\"lengthLimit\":200},\"isRequired\":false,\"displayName\":\"Handle\",\"description\":\"\",\"createTime\":\"2021-04-17T14:05:41.377Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T14:05:41.377Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":false,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"c9139306-ba73-44e3-b1e4-25b6f1a859a1\",\"name\":\"Id\",\"isPrimaryKey\":true,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":true,\"displayName\":\"Id\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-17T12:55:01.313Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T12:55:01.313Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"8d7abd1d-869f-eb11-85aa-0003ffba1aac\",\"name\":\"SocialMediaSite\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceChoiceSet\":{\"name\":\"SocMedSites\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"isRbacEnabled\":false,\"id\":\"00000000-0000-0000-0000-000000000000\",\"createTime\":\"0001-01-01T00:00:00Z\"},\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"INT\",\"lengthLimit\":200,\"maxValue\":1000000000000.0,\"minValue\":-1000000000000.0},\"isRequired\":false,\"displayName\":\"SocialMediaSite\",\"description\":\"\",\"createTime\":\"2021-04-17T14:06:34.827Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T14:06:34.827Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":false,\"fieldDisplayType\":\"ChoiceSetSingle\",\"choiceSetId\":\"1b33dbb2-f88e-eb11-85aa-0003ffba1aac\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"c8406122-efb7-4465-becb-721a8660d8fa\",\"name\":\"UpdatedBy\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":false,\"displayName\":\"UpdatedBy\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-17T12:55:01.313Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T12:55:01.313Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"722fbcda-2a4e-43b4-90d1-8c6fec8f8aa8\",\"name\":\"UpdateTime\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"DATETIMEOFFSET\"},\"isRequired\":false,\"displayName\":\"UpdateTime\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-17T12:55:01.313Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T12:55:01.313Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"choiceSetId\":\"00000000-0000-0000-0000-000000000000\",\"isAttachment\":false,\"isRbacEnabled\":false}],\"recordCount\":8,\"storageSizeInMB\":0.070312,\"usedStorageSizeInMB\":0.015625,\"isRbacEnabled\":false,\"id\":\"560a981e-7c9f-eb11-85aa-0003ffba1aac\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"createTime\":\"2021-04-17T12:55:01.303Z\",\"updateTime\":\"2021-04-17T14:06:34.827Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\"}],\"choicesets\":[{\"id\":\"1b33dbb2-f88e-eb11-85aa-0003ffba1aac\",\"name\":\"SocMedSites\",\"displayName\":\"SocMedSites\",\"description\":\"This is a choice set of Social Media Sites that used in the Social Media Bots model.\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"createTime\":\"2021-03-27T12:33:57.863Z\",\"updateTime\":\"2021-03-27T12:34:56.47Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"data\":[{\"DisplayName\":\"Instagram\",\"Name\":\"Instagram\",\"NumberId\":0},{\"DisplayName\":\"Facebook\",\"Name\":\"Facebook\",\"NumberId\":1},{\"DisplayName\":\"Youtube\",\"Name\":\"Youtube\",\"NumberId\":2},{\"DisplayName\":\"Soundcloud\",\"Name\":\"Soundcloud\",\"NumberId\":3},{\"DisplayName\":\"Social Media Sites\",\"Name\":\"SocialMediaSites\",\"NumberId\":4},{\"DisplayName\":\"Twitter\",\"Name\":\"Twitter\",\"NumberId\":5},{\"DisplayName\":\"TikTok\",\"Name\":\"TikTok\",\"NumberId\":6}]}]}",
+  "EntitiesJson": "{\"entities\":[{\"name\":\"SocMedSignUp\",\"displayName\":\"SocMedBotsSignUp\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"description\":\"People who have signed up for SocMedBotsFollowers automation.\",\"fields\":[{\"id\":\"2b25c543-ecd6-4a14-974b-b57fe2cac4e2\",\"name\":\"CreatedBy\",\"isPrimaryKey\":false,\"isForeignKey\":true,\"isUnique\":false,\"referenceName\":\"fk_CreatedBy_ee1f44d8-d7f6-46fb-9754-287768b8b1e3\",\"referenceEntity\":{\"name\":\"SystemUser\",\"displayName\":\"System Users\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"isRbacEnabled\":false,\"id\":\"717544d9-89c8-eb11-a7ad-a085fc8e5f9e\"},\"referenceField\":{\"id\":\"97a06177-97d2-49d2-9514-583f5fbe2886\",\"definition\":{\"name\":\"Name\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"NVARCHAR\",\"lengthLimit\":512},\"isRequired\":false,\"displayName\":\"Name\",\"createTime\":\"2021-11-21T21:23:12.8167565Z\",\"updateTime\":\"2021-11-21T21:23:12.8167567Z\",\"isSystemField\":false,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false}},\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":true,\"displayName\":\"CreatedBy\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-02T11:26:01.42Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-06-11T10:20:28.24Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":true,\"fieldDisplayType\":\"Relationship\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"14d5cbd8-3941-4857-8747-6ba2632be899\",\"name\":\"CreateTime\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"DATETIMEOFFSET\"},\"isRequired\":true,\"displayName\":\"CreateTime\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-02T11:26:01.42Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-02T11:26:01.42Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"7bc10f63-a693-eb11-85aa-0003ffba1aac\",\"name\":\"Handle\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"NVARCHAR\",\"lengthLimit\":200},\"isRequired\":true,\"displayName\":\"Handle\",\"description\":\"Social Media Handle being tracked.\",\"createTime\":\"2021-04-02T11:27:21.083Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-02T11:27:31.387Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":false,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"c0339d29-1f6c-435d-90c2-2d95285e17db\",\"name\":\"Id\",\"isPrimaryKey\":true,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":true,\"displayName\":\"Id\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-02T11:26:01.42Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-02T11:26:01.42Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"e9be427a-a693-eb11-85aa-0003ffba1aac\",\"name\":\"SocialMediaSite\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceChoiceSet\":{\"name\":\"SocMedSites\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"isRbacEnabled\":false},\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"INT\",\"lengthLimit\":200,\"maxValue\":1000000000000.0,\"minValue\":-1000000000000.0},\"isRequired\":true,\"displayName\":\"SocialMediaSite\",\"description\":\"\",\"createTime\":\"2021-04-02T11:28:00.007Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-02T11:28:00.007Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":false,\"fieldDisplayType\":\"ChoiceSetSingle\",\"choiceSetId\":\"1b33dbb2-f88e-eb11-85aa-0003ffba1aac\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"2cd56833-fdf1-4819-8660-cdca252242c4\",\"name\":\"UpdatedBy\",\"isPrimaryKey\":false,\"isForeignKey\":true,\"isUnique\":false,\"referenceName\":\"fk_UpdatedBy_120993e8-d3fc-401e-bb37-038c2f095925\",\"referenceEntity\":{\"name\":\"SystemUser\",\"displayName\":\"System Users\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"isRbacEnabled\":false,\"id\":\"717544d9-89c8-eb11-a7ad-a085fc8e5f9e\"},\"referenceField\":{\"id\":\"97a06177-97d2-49d2-9514-583f5fbe2886\",\"definition\":{\"name\":\"Name\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"NVARCHAR\",\"lengthLimit\":512},\"isRequired\":false,\"displayName\":\"Name\",\"createTime\":\"2021-11-21T21:23:12.8167592Z\",\"updateTime\":\"2021-11-21T21:23:12.8167593Z\",\"isSystemField\":false,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false}},\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":false,\"displayName\":\"UpdatedBy\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-02T11:26:01.42Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-06-11T10:20:28.24Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":true,\"fieldDisplayType\":\"Relationship\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"e3373585-422a-489f-9e47-8a9f060e1f86\",\"name\":\"UpdateTime\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"DATETIMEOFFSET\"},\"isRequired\":false,\"displayName\":\"UpdateTime\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-02T11:26:01.42Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-02T11:26:01.42Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false}],\"recordCount\":3,\"storageSizeInMB\":0.070312,\"usedStorageSizeInMB\":0.015625,\"isRbacEnabled\":false,\"id\":\"84dc9233-a693-eb11-85aa-0003ffba1aac\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"createTime\":\"2021-04-02T11:26:01.407Z\",\"updateTime\":\"2021-06-11T10:20:28.24Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\"},{\"name\":\"SocMedFollowing\",\"displayName\":\"SocMedFollowing\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"description\":\"Social Media Following is related to SocMedBotsSignUp\",\"fields\":[{\"id\":\"00c5f1d4-2cb0-49e6-8b07-1065e29eb2ed\",\"name\":\"CreatedBy\",\"isPrimaryKey\":false,\"isForeignKey\":true,\"isUnique\":false,\"referenceName\":\"fk_CreatedBy_1f5669fe-2221-4b3a-948b-79ed33a438b5\",\"referenceEntity\":{\"name\":\"SystemUser\",\"displayName\":\"System Users\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"isRbacEnabled\":false,\"id\":\"717544d9-89c8-eb11-a7ad-a085fc8e5f9e\"},\"referenceField\":{\"id\":\"97a06177-97d2-49d2-9514-583f5fbe2886\",\"definition\":{\"name\":\"Name\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"NVARCHAR\",\"lengthLimit\":512},\"isRequired\":false,\"displayName\":\"Name\",\"createTime\":\"2021-11-21T21:23:12.8167632Z\",\"updateTime\":\"2021-11-21T21:23:12.8167632Z\",\"isSystemField\":false,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false}},\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":true,\"displayName\":\"CreatedBy\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-17T12:55:01.313Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-06-11T10:20:56.75Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":true,\"fieldDisplayType\":\"Relationship\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"6797e4a8-ea29-4e39-b85d-d84418b89b70\",\"name\":\"CreateTime\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"DATETIMEOFFSET\"},\"isRequired\":true,\"displayName\":\"CreateTime\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-17T12:55:01.313Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T12:55:01.313Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"9bcec182-7c9f-eb11-85aa-0003ffba1aac\",\"name\":\"Followers\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"DECIMAL\",\"lengthLimit\":1000,\"maxValue\":1000000000000.0,\"minValue\":-1000000000000.0,\"decimalPrecision\":2},\"isRequired\":false,\"displayName\":\"Followers\",\"description\":\"The followers of handle on socmediasite recorded on createdby date.\",\"createTime\":\"2021-04-17T12:57:49.333Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T12:57:49.333Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":false,\"fieldDisplayType\":\"Basic\",\"defaultValue\":\"0\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"7f3ae1fd-859f-eb11-85aa-0003ffba1aac\",\"name\":\"Handle\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"NVARCHAR\",\"lengthLimit\":200},\"isRequired\":false,\"displayName\":\"Handle\",\"description\":\"\",\"createTime\":\"2021-04-17T14:05:41.377Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T14:05:41.377Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":false,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"c9139306-ba73-44e3-b1e4-25b6f1a859a1\",\"name\":\"Id\",\"isPrimaryKey\":true,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":true,\"displayName\":\"Id\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-17T12:55:01.313Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T12:55:01.313Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"8d7abd1d-869f-eb11-85aa-0003ffba1aac\",\"name\":\"SocialMediaSite\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceChoiceSet\":{\"name\":\"SocMedSites\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"isRbacEnabled\":false},\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"INT\",\"lengthLimit\":200,\"maxValue\":1000000000000.0,\"minValue\":-1000000000000.0},\"isRequired\":false,\"displayName\":\"SocialMediaSite\",\"description\":\"\",\"createTime\":\"2021-04-17T14:06:34.827Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T14:06:34.827Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":false,\"fieldDisplayType\":\"ChoiceSetSingle\",\"choiceSetId\":\"1b33dbb2-f88e-eb11-85aa-0003ffba1aac\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"c8406122-efb7-4465-becb-721a8660d8fa\",\"name\":\"UpdatedBy\",\"isPrimaryKey\":false,\"isForeignKey\":true,\"isUnique\":false,\"referenceName\":\"fk_UpdatedBy_021a3c6d-6023-4f79-a66c-78ee2708afdd\",\"referenceEntity\":{\"name\":\"SystemUser\",\"displayName\":\"System Users\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"isRbacEnabled\":false,\"id\":\"717544d9-89c8-eb11-a7ad-a085fc8e5f9e\"},\"referenceField\":{\"id\":\"97a06177-97d2-49d2-9514-583f5fbe2886\",\"definition\":{\"name\":\"Name\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"NVARCHAR\",\"lengthLimit\":512},\"isRequired\":false,\"displayName\":\"Name\",\"createTime\":\"2021-11-21T21:23:12.8167655Z\",\"updateTime\":\"2021-11-21T21:23:12.8167655Z\",\"isSystemField\":false,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false}},\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":false,\"displayName\":\"UpdatedBy\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-17T12:55:01.313Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-06-11T10:20:56.75Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"isSystemField\":true,\"fieldDisplayType\":\"Relationship\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"722fbcda-2a4e-43b4-90d1-8c6fec8f8aa8\",\"name\":\"UpdateTime\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"DATETIMEOFFSET\"},\"isRequired\":false,\"displayName\":\"UpdateTime\",\"description\":\"System built-in field\",\"createTime\":\"2021-04-17T12:55:01.313Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-04-17T12:55:01.313Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false}],\"recordCount\":137,\"storageSizeInMB\":0.195312,\"usedStorageSizeInMB\":0.046875,\"isRbacEnabled\":false,\"id\":\"560a981e-7c9f-eb11-85aa-0003ffba1aac\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"createTime\":\"2021-04-17T12:55:01.303Z\",\"updateTime\":\"2021-06-11T10:20:56.75Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\"},{\"name\":\"SystemUser\",\"displayName\":\"System Users\",\"entityTypeId\":3,\"entityType\":\"SystemEntity\",\"description\":\"Contains Automation Cloud users and groups that have ever had roles assigned, or accessed Data Service\",\"fields\":[{\"id\":\"db3549c4-3a50-48be-ba90-ec293711b645\",\"name\":\"CreateTime\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"DATETIMEOFFSET\"},\"isRequired\":true,\"displayName\":\"CreateTime\",\"description\":\"System built-in field\",\"createTime\":\"2021-06-08T18:46:39.14Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-06-08T18:46:39.14Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"5c89c727-c26b-4a4e-9ec7-a816b8a155ed\",\"name\":\"Email\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"NVARCHAR\",\"lengthLimit\":512},\"isRequired\":false,\"displayName\":\"E-mail\",\"description\":\"E-mail\",\"createTime\":\"2021-06-08T18:46:39.14Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-06-08T18:46:39.14Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"a91e19e7-f55e-476f-adcd-d1fba9893ad0\",\"name\":\"Id\",\"isPrimaryKey\":true,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"UNIQUEIDENTIFIER\"},\"isRequired\":true,\"displayName\":\"Id\",\"description\":\"System built-in field\",\"createTime\":\"2021-06-08T18:46:39.14Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-06-08T18:46:39.14Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"a0459e8d-f40c-47ae-9fa7-fb469bef490c\",\"name\":\"IsActive\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"BIT\"},\"isRequired\":true,\"displayName\":\"IsActive\",\"description\":\"IsActive\",\"createTime\":\"2021-06-08T18:46:39.14Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-06-08T18:46:39.14Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"97a06177-97d2-49d2-9514-583f5fbe2886\",\"name\":\"Name\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"NVARCHAR\",\"lengthLimit\":512},\"isRequired\":true,\"displayName\":\"Name\",\"description\":\"Name\",\"createTime\":\"2021-06-08T18:46:39.14Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-06-08T18:46:39.14Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"4ec8aba1-c0cc-47e2-b0c2-004dc48204e8\",\"name\":\"Type\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceChoiceSet\":{\"name\":\"UserType\",\"entityTypeId\":0,\"entityType\":\"Entity\",\"isRbacEnabled\":false},\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"INT\",\"maxValue\":9007199254740991.0,\"minValue\":-9007199254740991.0},\"isRequired\":true,\"displayName\":\"Type\",\"description\":\"Type\",\"createTime\":\"2021-06-08T18:46:39.14Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-06-08T18:46:39.14Z\",\"isSystemField\":true,\"fieldDisplayType\":\"ChoiceSetSingle\",\"choiceSetId\":\"6a7544d9-89c8-eb11-a7ad-a085fc8e5f9e\",\"isAttachment\":false,\"isRbacEnabled\":false},{\"id\":\"79647f55-47c1-4db7-a249-5edbfa630ad2\",\"name\":\"UpdateTime\",\"isPrimaryKey\":false,\"isForeignKey\":false,\"isUnique\":false,\"referenceType\":\"ManyToOne\",\"sqlType\":{\"name\":\"DATETIMEOFFSET\"},\"isRequired\":false,\"displayName\":\"UpdateTime\",\"description\":\"System built-in field\",\"createTime\":\"2021-06-08T18:46:39.14Z\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"updateTime\":\"2021-06-08T18:46:39.14Z\",\"isSystemField\":true,\"fieldDisplayType\":\"Basic\",\"isAttachment\":false,\"isRbacEnabled\":false}],\"recordCount\":5,\"storageSizeInMB\":0.070312,\"usedStorageSizeInMB\":0.015625,\"isRbacEnabled\":false,\"id\":\"717544d9-89c8-eb11-a7ad-a085fc8e5f9e\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"createTime\":\"2021-06-08T18:46:39.12Z\",\"updateTime\":\"2021-06-08T18:46:39.12Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\"}],\"choicesets\":[{\"id\":\"1b33dbb2-f88e-eb11-85aa-0003ffba1aac\",\"name\":\"SocMedSites\",\"displayName\":\"SocMedSites\",\"description\":\"This is a choice set of Social Media Sites that used in the Social Media Bots model.\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"createTime\":\"2021-03-27T12:33:57.863Z\",\"updateTime\":\"2021-03-27T12:34:56.47Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"data\":[{\"DisplayName\":\"Instagram\",\"Name\":\"Instagram\",\"NumberId\":0},{\"DisplayName\":\"Facebook\",\"Name\":\"Facebook\",\"NumberId\":1},{\"DisplayName\":\"Youtube\",\"Name\":\"Youtube\",\"NumberId\":2},{\"DisplayName\":\"Soundcloud\",\"Name\":\"Soundcloud\",\"NumberId\":3},{\"DisplayName\":\"Social Media Sites\",\"Name\":\"SocialMediaSites\",\"NumberId\":4},{\"DisplayName\":\"Twitter\",\"Name\":\"Twitter\",\"NumberId\":5},{\"DisplayName\":\"TikTok\",\"Name\":\"TikTok\",\"NumberId\":6}]},{\"id\":\"6a7544d9-89c8-eb11-a7ad-a085fc8e5f9e\",\"name\":\"UserType\",\"displayName\":\"User Type\",\"description\":\"Denotes the type of user record in the System User entity\",\"createdBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"createTime\":\"2021-06-08T18:46:39.03Z\",\"updateTime\":\"2021-06-08T18:46:39.03Z\",\"updatedBy\":\"8591aa4f-5f73-472a-9097-554b57154416\",\"data\":[{\"DisplayName\":\"Group\",\"Name\":\"Group\",\"NumberId\":1},{\"DisplayName\":\"User\",\"Name\":\"User\",\"NumberId\":0},{\"DisplayName\":\"Robot\",\"Name\":\"Robot\",\"NumberId\":2}]}]}",
   "SelectedEntitiesNames": [
-    "SocMedSignUp"
+    "SocMedSignUp",
+    "SystemUser"
   ]
 }
