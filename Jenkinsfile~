@@ -10,7 +10,7 @@ pipeline {
 	        UIPATH_ORCH_URL = "https://cloud.uipath.com"
 	        UIPATH_ORCH_LOGICAL_NAME = "cognitivemetaphors"
 	        UIPATH_ORCH_TENANT_NAME = "CognitiveMetaphors"
-	        UIPATH_ORCH_FOLDER_NAME = "Shared\SocialMediaBots"
+	        UIPATH_ORCH_FOLDER_NAME = "Shared/SocialMediaBots"
 	    }
 	
 
